@@ -7,12 +7,12 @@ clone_folder: c:\project\src\github.com\dontpanic92\wxGo
 clone_depth: 5
 environment:
   matrix:
-  - GOROOT: c:\go16
   - GOROOT: c:\go17
+  - GOROOT: c:\go18
 
-matrix:
-  allow_failures:
-    - GOROOT: c:\go16
+#matrix:
+#  allow_failures:
+#    - GOROOT: c:\go16
 
 build_script:
 - cmd: >-
@@ -29,5 +29,5 @@ build_script:
 
     cd %APPVEYOR_BUILD_FOLDER%
 
-    go get -v -t -x .\\...
+    go get -v -t -x -tags msys64-wordaround .\\...
 
