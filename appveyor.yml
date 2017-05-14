@@ -29,5 +29,5 @@ build_script:
 
     cd %APPVEYOR_BUILD_FOLDER%
 
-    go get -v -t -x -tags msys64-wordaround .\\...
+    go get -v -t -x -tags=msys64-workaround .\\...
 
